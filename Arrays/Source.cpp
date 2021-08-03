@@ -1,17 +1,25 @@
 ﻿#include<iostream>
 using namespace std;
+using std::cin;
+using std::cout;
+using std::endl;
+
+const int ROWS = 3;
+const int COLS = 8;
 
 void FillRand(int arr[], const int n);
 void FillRand(double arr[], const int n);
 void FillRand(short arr[], const int n);
 void FillRand(float arr[], const int n);
 void FillRand(char arr[], const int n);
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Print(int arr[], const int n);
 void Print(double arr[], const int n);
 void Print(short arr[], const int n);
 void Print(float arr[], const int n);
 void Print(char arr[], const int n);
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS);
 
 void Sort(int arr[], const int n);
 void Sort(double arr[], const int n);
@@ -55,10 +63,13 @@ void ShiftRight(short arr[], const int n);
 void ShiftRight(float arr[], const int n);
 void ShiftRight(char arr[], const int n);
 
+//#define Home_Work 
+
 void main()
 {
 	setlocale(LC_ALL, "Rus");
 	
+#ifdef Home_Work
 	cout << "Int: " << endl;
 	const int n = 5;
 	int arr[n];
@@ -75,17 +86,17 @@ void main()
 	ShiftRight(arr, n);
 	Print(arr, n);
 	cout << endl;
-	
+
 	cout << "///////////////////////////////////////////" << endl;
-	
+
 	cout << endl;
 	cout << "Double: " << endl;
 	const int B_SIZE = 8;
-	double brr[B_SIZE];	
+	double brr[B_SIZE];
 	FillRand(brr, B_SIZE);
 	Print(brr, B_SIZE);
 	Sort(brr, B_SIZE);
-	Print(brr, B_SIZE);	
+	Print(brr, B_SIZE);
 	cout << "Сумма всех элементов: " << Sum(brr, B_SIZE) << endl;
 	cout << "Среднее арифметическое элементов: " << Avg(brr, B_SIZE) << endl;
 	cout << "Минимальное значение всех элементов: " << minValueIn(brr, B_SIZE) << endl;
@@ -97,7 +108,7 @@ void main()
 	cout << endl;
 
 	cout << "///////////////////////////////////////////" << endl;
-	
+
 	cout << endl;
 	cout << "short: " << endl;
 	const short C_SIZE = 10;
@@ -137,7 +148,7 @@ void main()
 	cout << endl;
 
 	cout << "///////////////////////////////////////////" << endl;
-	
+
 	cout << endl;
 	const int E_SIZE = 15;
 	char err[E_SIZE];
@@ -153,6 +164,16 @@ void main()
 	Print(err, E_SIZE);
 	ShiftRight(err, E_SIZE);
 	Print(err, E_SIZE);
+#endif // Home_Work
+
+
+	/////////////////////////////////////////////////////////////
+
+	const int ROWS = 3;
+	const int COLS = 8;
+	int i_arr_2[ROWS][COLS];
+	FillRand(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
 }
 
 void FillRand(int arr[], const int n)
@@ -197,6 +218,18 @@ void FillRand(float arr[], const int n)
 		arr[i] = char(rand() % 255);
 	}
 }
+
+void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = rand() % 100;
+		}
+	}
+}
+
 
 void Print(int arr[], const int n)
 {
@@ -246,6 +279,18 @@ void Print(char arr[], const int n)
 		cout << arr[i] << "\t";
 	}
 	cout << endl;
+}
+
+void Print(int arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
 }
 
 
