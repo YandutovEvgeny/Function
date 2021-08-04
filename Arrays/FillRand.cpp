@@ -33,7 +33,9 @@ void FillRand(float arr[], const int n)
 	{
 		arr[i] = float(rand() % 10000) / 100;
 	}
-}void FillRand(char arr[], const int n)
+}
+
+void FillRand(char arr[], const int n)
 {
 	//«аполнение массива случайными числами
 	for (int i = 0; i < n; i++)
@@ -52,3 +54,52 @@ void FillRand(int arr[ROWS][COLS], const int ROWS, const int COLS)
 		}
 	}
 }
+
+void FillRand(double arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = double(rand() % 100) / 100;
+		}
+	}
+}
+
+void FillRand(short arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = short(rand() % 100);
+		}
+	}
+}
+
+void FillRand(float arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = float(rand() % 100) / 10;
+		}
+	}
+}
+
+void FillRand(char arr[ROWS][COLS], const int ROWS, const int COLS)
+{
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLS; j++)
+		{
+			arr[i][j] = char(rand() % 255);
+		}
+	}
+}
+
+
+
+
+

@@ -5,7 +5,8 @@
 #include"Statistics.h"
 #include"Shifts.h"
 
-#define Home_Work 
+#define LLine "///////////////////////////////////////////////"
+//#define Home_Work 
 
 void main()
 {
@@ -29,7 +30,7 @@ void main()
 	Print(arr, n);
 	cout << endl;
 
-	cout << "///////////////////////////////////////////" << endl;
+	cout << LLine << endl;
 
 	cout << endl;
 	cout << "Double: " << endl;
@@ -49,7 +50,7 @@ void main()
 	Print(brr, B_SIZE);
 	cout << endl;
 
-	cout << "///////////////////////////////////////////" << endl;
+	cout << LLine << endl;
 
 	cout << endl;
 	cout << "short: " << endl;
@@ -69,7 +70,7 @@ void main()
 	Print(crr, C_SIZE);
 	cout << endl;
 
-	cout << "///////////////////////////////////////////" << endl;
+	cout << LLine << endl;
 
 	cout << endl;
 	cout << "float: " << endl;
@@ -89,7 +90,7 @@ void main()
 	Print(drr, D_SIZE);
 	cout << endl;
 
-	cout << "///////////////////////////////////////////" << endl;
+	cout << LLine << endl;
 
 	cout << endl;
 	const int E_SIZE = 15;
@@ -115,4 +116,72 @@ void main()
 	int i_arr_2[ROWS][COLS];
 	FillRand(i_arr_2, ROWS, COLS);
 	Print(i_arr_2, ROWS, COLS);
+	cout << "Отсортированный массив: " << endl;
+	Sort(i_arr_2, ROWS, COLS);
+	Print(i_arr_2, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_arr_2, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое всех элементов в массиве: " << Avg(i_arr_2, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << minValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(i_arr_2, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << LLine << endl;
+
+	cout << endl;
+	double i_brr_2[ROWS][COLS];
+	FillRand(i_brr_2, ROWS, COLS);
+	Print(i_brr_2, ROWS, COLS);
+	cout << "Отсортированный массив: " << endl;
+	Sort(i_brr_2, ROWS, COLS);
+	Print(i_brr_2, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_brr_2, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое всех элементов в массиве: " << Avg(i_brr_2, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << minValueIn(i_brr_2, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(i_brr_2, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << LLine << endl;
+
+	cout << endl;
+	short i_crr_2[ROWS][COLS];
+	FillRand(i_crr_2, ROWS, COLS);
+	Print(i_crr_2, ROWS, COLS);
+	cout << "Отсортированный массив: " << endl;
+	Sort(i_crr_2, ROWS, COLS);
+	Print(i_crr_2, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_crr_2, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое всех элементов в массиве: " << Avg(i_crr_2, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << minValueIn(i_crr_2, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(i_crr_2, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << LLine << endl;
+
+	cout << endl;
+	float i_drr_2[ROWS][COLS];
+	FillRand(i_drr_2, ROWS, COLS);
+	Print(i_drr_2, ROWS, COLS);
+	cout << "Отсортированный массив: " << endl;
+	Sort(i_drr_2, ROWS, COLS);
+	Print(i_drr_2, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_drr_2, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое всех элементов в массиве: " << Avg(i_drr_2, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << minValueIn(i_drr_2, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(i_drr_2, ROWS, COLS) << endl;
+	cout << endl;
+
+	cout << LLine << endl;
+
+	cout << endl;
+	char i_err_2[ROWS][COLS];
+	FillRand(i_err_2, ROWS, COLS);
+	Print(i_err_2, ROWS, COLS);
+	cout << "Отсортированный массив: " << endl;
+	Sort(i_err_2, ROWS, COLS);
+	Print(i_err_2, ROWS, COLS);
+	cout << "Сумма всех элементов в массиве: " << Sum(i_err_2, ROWS, COLS) << endl;
+	cout << "Среднее арифметическое всех элементов в массиве: " << Avg(i_err_2, ROWS, COLS) << endl;
+	cout << "Минимальное значение в массиве: " << minValueIn(i_err_2, ROWS, COLS) << endl;
+	cout << "Максимальное значение в массиве: " << maxValueIn(i_err_2, ROWS, COLS) << endl;
+	cout << endl;
 }
