@@ -199,7 +199,7 @@ void FillRand(short arr[], const int n)
 	//Заполнение массива случайными числами
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = short(rand() % 10000) / 100;
+		arr[i] = short(rand() % 100);
 	}
 }
 
